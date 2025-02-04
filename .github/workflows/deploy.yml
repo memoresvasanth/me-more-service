@@ -33,8 +33,7 @@ jobs:
           ECR_REPOSITORY: me-more-1-ecr-repo
           IMAGE_TAG: latest
         run: |
-          docker buildx build --platform linux/amd64 -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          docker buildx build --platform linux/amd64 -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG . --push
 
       - name: Force new deployment in ECS
         run: |
