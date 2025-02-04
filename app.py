@@ -2,6 +2,6 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/title")
+@app.get("/title-of-the-page")
 def title():
     return {"message": "ResMed"}
