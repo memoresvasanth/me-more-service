@@ -1,0 +1,21 @@
+
+
+
+Push to AWS :
+
+Write Latest terraform script (networking.tf ) to create VPC with two subnets (with cider and availability zones) and security group with basic information that should allow all incoming traffic. 
+
+Another script (main.tf) to create AWS ECR/ECS and deploy the fast api application with its proper role. 
+
+Note : No duplicate configuration between main.tf and  networking.tf.  Both networking.tf and main.tf should keep its own configuration file to store the variables. It should have all the names to create both AWS Resources. Get the name for all above aws resources from terraform.tfvars. 
+
+Finally provide instruction to run the above terraform scripts. 
+
+End of this, I should be able to access the fast api application through ECS task using public ip
+
+
+GitHub Action workflow : 
+
+Provide steps to push the code to https://github.com/memoresvasanth/me-more-service.git repository (Create Gitignore file and all the necessary files).
+
+Create Github workflow to build and push the Docker image to AWS ECR and deploy it to AWS ECS whenever there is a push to the main branch
